@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/instructions.css" />
+  <title>TMC</title>
+  <link rel="shortcut icon" href="images/TMC-heart.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="flipbook">
+    <div class="hard"><img src="instructions/1.png" alt=""></div>
+    <div class="hard"></div>
+    <div>
+      <img src="instructions/2.png" alt="">
+    </div>
+    <div>
+      <img src="instructions/3.png" alt="">
+    </div>
+    <div>
+      <img src="instructions/4.png" alt="">
+    </div>
+    <div>
+      <img src="instructions/5.png" alt="">
+    </div>
+    <div class="hard"></div>
+    <div class="hard"><img src="instructions/6.png" alt=""></div>
+  </div>
+
+
+
+  <nav id="bottom-menu">
+    <a href="home.html"><img src="images/home1.png" onmouseover="this.src='images/home2.png';" onmouseout="this.src='images/home1.png';"></a>
+</nav>
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/turn.js"></script>
+  <script>
+    $(".flipbook").turn();
+  </script>
+</body>
+
+</html>
