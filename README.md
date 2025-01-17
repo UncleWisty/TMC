@@ -1,9 +1,9 @@
 TMC project based on the TMC card game.
-
-TO DO:
-· Individual character tab for everyone
-· MP3 player inside every character tab
-· Final images and not placeholders
-· Home distribution
-· Contact page
-· Look for hosting
+<br><br>
+TO DO:<br>
+· Individual character tab for everyone<br>
+· MP3 player inside every character tab<br>
+· Final images and not placeholders<br>
+· Home distribution<br>
+· Contact page<br>
+· Look for hosting<br>
