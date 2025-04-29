@@ -13,27 +13,34 @@ body {
     height: 100vh;
     width: 100vw;
 	overflow: hidden;
-	background: white;
 }
 
 .flipbook {
-    width: 1414px;
-    height: 1000px;
+    width: 75%;
+    height: 8.2%;
+
 }
+    /*10.05 cm x 15 cm*/
+
+
+.flipbook img{
+	width: 100%;
+	object-fit: fill;
+    user-select: none;
+    pointer-events: none;
+
+}
+
 
 .flipbook .hard {
     background: #ffffff !important;
     color: #fff;
     font-weight: bold;
     border: none; 
+    user-select: none;
 }
 
-.flipbook .hard small{
-	font-style: italic;
-	font-weight: lighter;
-	opacity: 0.7;
-	font-size: 14px;
-}
+
 
 .flipbook .page {
     background: white;
@@ -43,20 +50,18 @@ body {
 	align-items: center;
     gap: 10px;
     border: 1px solid rgba(0, 0, 0, 0.11);
+    
 }
 
-.page img{
-	width: 100%;
-	object-fit: cover;
-	margin: auto;
-}
 
-.flipbook .page small{
-	font-size: 14px;
-    margin-bottom: 10px;
-}
+
+
 #bottom-menu{
-margin-top: 5em;
+margin-top: 3em;
+justify-content: center;
+display: flex;
+user-select: none;
+
 }
 
 #bottom-menu img{
@@ -64,3 +69,12 @@ margin-top: 5em;
     width: 5em;
     height: 5em;
 }
+
+
+@media screen and (max-width: 720px) {
+    .flipbook {
+        width: 90%;
+        height: 8.2%;
+    
+    }
+  }
