@@ -78,3 +78,15 @@ background-image: none;
 button{
 	cursor: pointer;
 }
+
+#bottom-menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#bottom-menu img{
+    margin: 1em;
+    width: 5em;
+    height: 5em;
+}
