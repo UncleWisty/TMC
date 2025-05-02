@@ -6,4 +6,4 @@ TO DO:<br>
 · Final images and not placeholders<br>
 · Home distribution<br>
 · Contact page<br>
-· Look for hosting<br>
+
