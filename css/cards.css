@@ -4,6 +4,10 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
   }
   /* Contenedor con los 6 paquetes */
   .container {
@@ -69,10 +73,14 @@ body {
 	font-weight: bold;
 	pointer-events: none;
 	z-index: 5;
-	background-color: white;
-	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: solid black 5px;
+	border-radius: 12px;
 	padding: 10px;
 	width: 80%;
+  }
+  .deck-title img{
+	width: 100px;
   }
   /* Vista expandida cuando se abre un paquete */
   .expanded {
@@ -82,13 +90,15 @@ body {
 	transform: translate(-50%, -50%);
 	width: 80%;
 	height: 80%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(255, 255, 255, 0.3);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	z-index: 10;
 	overflow-y: auto;
 	padding: 20px;
+	border-radius: 12px;
+	border: solid black 5px;
 	
   }
   /* Contenedor para las cartas en la vista expandida en fila (row) */
@@ -158,32 +168,80 @@ body {
   }
   /* Estilos para el modal de la carta ampliada */
   #cardModal {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
-	justify-content: center;
-	align-items: center;
-	z-index: 20;
-  }
-  /* La carta dentro del modal */
-  #cardModal .modal-card img {
-	max-width: 90%;
-	max-height: 90%;
-	border-radius: 10px;
-  }
-
-#bottom-menu{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
+
+.modal-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+	border-radius: 12px;
+    border: solid black 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 1001;
+	
+}
+
+.prev-btn {
+    left: -170px;
+}
+
+.next-btn {
+    right: -170px;	
+}
+
+
+  #bottom-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: center;
+	margin-top: 6%;
+
+}
 #bottom-menu img{
-    margin: 1em;
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
 }
+
+
+@media (max-width: 1000px) {
+    #cardModal .modal-card img {
+		max-width: 90%;
+		max-height: 90%;
+		border-radius: 10px;
+		
+	  }
+	  body {
+        background-image: url("../images/background-mobile.png");
+        background-size: 100vb 100vb;
+    
+    }
+  }

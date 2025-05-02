@@ -19,7 +19,7 @@ body {
 .flipbook {
     width: 75%;
     height: 41em;
-    border: solid black;
+    
 
 }
     /*10.05 cm x 15 cm*/
@@ -27,7 +27,7 @@ body {
 
 .flipbook img{
 	width: 100%;
-	object-fit: fill;
+	object-fit: contain;
     user-select: none;
     pointer-events: none;
 
@@ -68,15 +68,22 @@ user-select: none;
 
 #bottom-menu img{
     margin: 1em;
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
 }
 
 
-@media screen and (max-width: 720px) {
+
+
+@media (max-width: 1200px) {
     .flipbook {
-        width: 90%;
-        height: 8.2%;
-    
+        width: 90% ;
+        height: 2.7% ;
     }
+
+    .flipbook img{
+        display: block;
+        margin: 0 -20px  0 0;
+    }
+   
   }

@@ -12,14 +12,45 @@ body {
     margin-bottom: 5em;
     display: flex;
     justify-content: center;
+    margin-top: 8%;
 }
 
 #cta img{
-    object-fit: cover;
-    height: 100%;
+    object-fit: contain;
+    width: 100% ;
+}
+
+#bottom-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: center;
+
 }
 #bottom-menu img{
-    margin: 1em;
-    width: 5em;
-    height: 5em;
+    
+    width: 3em;
+    height: 3em;
 }
+
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("../images/background-mobile.png");
+        background-size: 100vb 100vb;
+    
+    }
+
+    #cta{
+        width: 90%;
+        height: 30em;
+        margin: 2em;
+        margin-bottom: 5em;
+        display: flex;
+        justify-content: center;
+        margin-top: 20%;
+    }
+  }
+
