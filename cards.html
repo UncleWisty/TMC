@@ -18,129 +18,63 @@
 
         <a href="contact.html"><img src="images/contact1.png" onmouseover="this.src='images/contact2.png';" onmouseout="this.src='images/contact1.png';"></a>
     </nav>
-
-    <button type='button' onclick='reset_cards()'>Stack</button>
-    
-    <button type='button' onclick='separate_instantly()'>Separate instantly</button>
-    
-    
-    <!-- cards container -->
-    <div id='pack_cont' onclick='separate_instantly()'>
-        
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card' >
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-    
-        <!-- single card -->
-        <div class='card red'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card red'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card red'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card red'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-    
-        <!-- single card -->
-        <div class='card red'>
-            <img src="cards/test.png" alt="">
-        </div>
-        <!-- single card -->
-        
+<!-- Contenedor de los 6 paquetes -->
+<div class="container" id="decksContainer">
+    <div class="deck" data-deck="1">
+      <div class="inner-cards">
+        <div class="inner-card card1"><img src="cards/deck1-card1.png" alt=""></div>
+        <div class="inner-card card2"><img src="cards/deck1-card2.png" alt=""></div>
+        <div class="inner-card card3"><img src="cards/deck1-card3.png" alt=""></div>
+      </div>
+      <div class="deck-title hidden">ATAQUE</div>
     </div>
-    <!-- cards container -->
-    
-    <script type="text/javascript" src='js/jquery.min.js'></script>
-    <script type="text/javascript" src='js/script.js'></script>
-    
+    <div class="deck" data-deck="2">
+      <div class="inner-cards">
+        <div class="inner-card card1"><img src="cards/deck2-card1.png" alt=""></div>
+        <div class="inner-card card2"><img src="cards/deck2-card2.png" alt=""></div>
+        <div class="inner-card card3"><img src="cards/deck2-card3.png" alt=""></div>
+      </div>
+      <div class="deck-title hidden">ATAQUE DE COLOR</div>
+    </div>
+    <div class="deck" data-deck="3">
+      <div class="inner-cards">
+        <div class="inner-card card1"><img src="cards/deck3-card1.png" alt=""></div>
+        <div class="inner-card card2"><img src="cards/deck3-card2.png" alt=""></div>
+        <div class="inner-card card3"><img src="cards/deck3-card3.png" alt=""></div>
+      </div>
+      <div class="deck-title hidden">DEFENSA</div>
+    </div>
+    <div class="deck" data-deck="4">
+      <div class="inner-cards">
+        <div class="inner-card card1"><img src="cards/deck4-card1.png" alt=""></div>
+        <div class="inner-card card2"><img src="cards/deck4-card2.png" alt=""></div>
+        <div class="inner-card card3"><img src="cards/deck4-card3.png" alt=""></div>
+      </div>
+      <div class="deck-title hidden">FUNCION</div>
+    </div>
+    <div class="deck" data-deck="5">
+      <div class="inner-cards">
+        <div class="inner-card card1"><img src="cards/deck5-card1.png" alt=""></div>
+        <div class="inner-card card2"><img src="cards/deck5-card2.png" alt=""></div>
+        <div class="inner-card card3"><img src="cards/deck5-card3.png" alt=""></div>
+      </div>
+      <div class="deck-title hidden">ESPECIALES</div>
+    </div>
+  </div>
+
+  <!-- Vista expandida para mostrar las cartas del paquete seleccionado -->
+  <div id="expandedDeck" class="expanded" style="display: none;">
+    <button class="close-btn" id="closeBtn"><img src="images/close.png" alt=""></button>
+    <div id="cardsContainer">
+      <!-- Las cartas se generarán dinámicamente aquí -->
+    </div>
+  </div>
+
+  <!-- Modal para mostrar la carta ampliada -->
+  <div id="cardModal">
+    <!-- La carta ampliada se inyectará dinámicamente -->
+  </div>
+
+  <script src="js/cards.js"></script>
     </body>
     </html>

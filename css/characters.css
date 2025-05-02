@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-image: url("../images/background.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,23 +8,31 @@ body {
 
 #character-div{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    height: 30em;
-    width: 80%;
+    height: auto;
+    width: 100%;
     margin: 5em;
-    margin-top: 2em;
+    margin-top: 5em;
 }
-#character-div img{
+
+
+
+
+
+.characters{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 15%;
+    height: auto;
+}
+
+.characters img{
     width: 100%;
     height: 30em;
     object-fit: cover;
-}
-.characters{
-    margin-left: 1em;
-    margin-right: 1em;
-    width: 100%;
-    height: 100%;
 }
 
 #bottom-menu img{
@@ -33,3 +41,16 @@ body {
     height: 5em;
 }
 
+
+
+  @media (max-width: 1024px) {
+    .characters{
+        width: 25%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .characters{
+        width: 45%;
+    }
+  }
