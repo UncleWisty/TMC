@@ -7,11 +7,11 @@ const fotos = ["images/reset.png", "images/reset2.png", "images/reset3.png", "im
     intervalo = setInterval(() => {
       index = (index + 1) % fotos.length;
       imagen.src = fotos[index];
-    }, 200); // cambia cada 500ms
+    }, 200); 
   });
 
   imagen.addEventListener("mouseleave", () => {
     clearInterval(intervalo);
     index = 0;
-    imagen.src = fotos[index]; // vuelve a la original
+    imagen.src = fotos[index]; 
   });

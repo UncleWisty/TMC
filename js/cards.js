@@ -1,4 +1,3 @@
-// Objeto que define el conjunto de cartas por cada paquete (cada carta tiene un identificador único)
 const decksData = {
     '1': [
       { id: 1, img: 'cards/deck1-card1.avif', name: '' },
@@ -111,7 +110,7 @@ const bmenu = document.getElementById('bottom-menu');
 let currentDeck = [];
 let currentCardIndex = 0;
 
-// Función que genera las cartas del paquete seleccionado con animación
+// Genera las cartas al entrar al paquete
 function showCardsForDeck(deckNumber) {
     cardsContainer.innerHTML = '';
     currentDeck = decksData[deckNumber] || [];
@@ -135,7 +134,7 @@ function showCardsForDeck(deckNumber) {
     });
 }
 
-let startX = 0; // Posición inicial del toque
+let startX = 0; 
 
 function showModal(deckNumber, cardIndex) {
     currentDeck = decksData[deckNumber] || [];
@@ -167,7 +166,7 @@ function showModal(deckNumber, cardIndex) {
     cardModal.appendChild(modalContent);
     cardModal.style.display = 'flex';
 
-    // Habilitar deslizamiento táctil solo en pantallas menores a 1000px
+    // Deslizamiento para moviles
     if (window.innerWidth < 1000) {
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
@@ -212,14 +211,14 @@ function showPrevCard() {
     }
 }
 
-// Actualizar la imagen en el modal
+// Actualizar la imagen 
 function updateModalImage() {
     const modalImg = document.querySelector('.modal-image');
     modalImg.src = currentDeck[currentCardIndex].img;
     modalImg.alt = currentDeck[currentCardIndex].name;
 }
 
-// Cerrar modal al hacer click fuera
+// Cerrar la vista extendida
 cardModal.addEventListener('click', function(e) {
     if (e.target === cardModal) {
         cardModal.style.display = 'none';
@@ -227,7 +226,7 @@ cardModal.addEventListener('click', function(e) {
 });
 
 
-// Evento para cerrar la vista de cartas y volver al listado de paquetes
+// Cerrar la vista de cartas y volver al listado de packs
 closeBtn.addEventListener('click', function() {
     expandedDeck.style.display = 'none';
     decksContainer.classList.remove('hidden');
@@ -267,7 +266,7 @@ function updateDeckTitles() {
 updateDeckTitles();
 window.addEventListener("resize", updateDeckTitles);
 
-// Asignar evento para abrir el modal desde las cartas generadas
+// Asignar evento para abrir la vista extendida
 document.querySelectorAll('.deck').forEach(deck => {
     deck.addEventListener('click', function() {
         const deckNumber = this.getAttribute('data-deck');

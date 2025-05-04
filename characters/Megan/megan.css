@@ -1,5 +1,46 @@
-#bottom-menu img{
-    margin: 1em;
-    width: 5em;
-    height: 5em;
+body {
+    background-image: url("wallpaper.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#app {
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    
+  }
+#bottom-menu {
+    position: fixed;      
+    bottom: 0;            
+    left: 50%;            
+    transform: translateX(-50%); 
+    width: 90%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: center;
+    
+    margin-bottom: 50px;
+}
+#bottom-menu img{
+    width: 3em;
+    height: 3em;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("wallpaper2.png");
+        background-position: center -15%;
+    }
+    #app {
+        display: none;
+      }
+  }

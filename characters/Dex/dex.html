@@ -8,6 +8,64 @@
     <link rel="shortcut icon" href="../../images/TMC-heart.png" type="image/x-icon">
 </head>
 <body>
+
+    <div id="app"></div>
+    <script src="https://unpkg.com/webamp"></script>
+    <script>
+      if (window.innerWidth > 600) {
+    const app = document.getElementById("app")
+    const webamp = new Webamp({
+      // Optional.
+      initialTracks: [{
+        metaData: {
+          artist: "Gorillaz",
+          title: "19-2000",
+        },
+        url: "../../music/dex/19-2000 - Gorillaz.mp3"
+      },
+      {
+        metaData: {
+          artist: "I MONSTER",
+          title: "Daydream In Blue",
+        },
+        url: "../../music/dex/Daydream In Blue - I MONSTER.mp3"
+      },
+      {
+        metaData: {
+          artist: "El cuarteto de Nos",
+          title: "Yendo a la casa de Damian",
+        },
+        url: "../../music/dex/Yendo a la casa de Damian - El cuarteto de Nos.mp3"
+      },
+      {
+        metaData: {
+          artist: "Zankoku na Tenshi no Te-ze",
+          title: "The Cruel Angel_s Thesis",
+        },
+        url: "../../music/dex/The Cruel Angel_s Thesis - Zankoku na Tenshi no Te-ze.mp3"
+      },
+      {
+        metaData: {
+          artist: "MGMT",
+          title: "Little Dark Age",
+        },
+        url: "../../music/dex/Little Dark Age - MGMT.mp3"
+      }],
+      // Optional. The default skin is included in the js bundle, and will be loaded by default.
+      initialSkin: {
+        // NOTE: Your skin file must be served from the same domain as your HTML
+        // file, or served with permissive CORS HTTP headers:
+        // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+        // Can be downloaded from https://github.com/captbaritone/webamp/raw/master/skins/TopazAmp1-2.wsz
+        url: "../../skins/dex.wsz"
+      },
+    });
+    // Render after the skin has loaded.
+    webamp.renderWhenReady(document.getElementById('app'));
+    webamp.play();
+  }
+    </script>
+
     <nav id="bottom-menu">
         <a href="../../home.html"><img src="../../images/home1.png" onmouseover="this.src='../../images/home2.png';" onmouseout="this.src='../../images/home1.png';"></a>
         <a href="../../characters.html"><img src="../../images/characters1.png" onmouseover="this.src='../../images/characters2.png';" onmouseout="this.src='../../images/characters1.png';"></a>

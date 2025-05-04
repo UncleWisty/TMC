@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMC</title>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="css/heart.css">
+    <link rel="shortcut icon" href="images/TMC-heart.png" type="image/x-icon">
+</head>
+<body>
+    <div class="ar-container">
+    <model-viewer 
+    src="models/heart.glb" 
+    ar 
+    ar-modes="webxr scene-viewer quick-look" 
+    camera-controls 
+    tone-mapping="neutral" 
+    poster="poster.webp" 
+    shadow-intensity="1"
+    field-of-view="20deg"
+    min-camera-orbit="auto auto 1m">
+</model-viewer>
+
+
+</div>
+<nav id="bottom-menu">
+
+    <a href="home.html"><img src="images/home1.png" onmouseover="this.src='images/home2.png';" onmouseout="this.src='images/home1.png';"></a>
+
+    <a href="characters.html"><img src="images/characters1.png" onmouseover="this.src='images/characters2.png';" onmouseout="this.src='images/characters1.png';"></a>
+
+    <a href="cards.html"><img src="images/cards1.png" onmouseover="this.src='images/cards2.png';" onmouseout="this.src='images/cards1.png';"></a>
+
+    <a href="instructions.html"><img src="images/instructions1.png" onmouseover="this.src='images/instructions2.png';" onmouseout="this.src='images/instructions1.png';"></a>
+
+    <a href="contact.html"><img src="images/contact1.png" onmouseover="this.src='images/contact2.png';" onmouseout="this.src='images/contact1.png';"></a>
+</nav>
+</body>
+</html>

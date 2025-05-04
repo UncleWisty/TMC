@@ -13,11 +13,13 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 8%;
+   
 }
 
 #cta img{
     object-fit: contain;
     width: 100% ;
+    pointer-events: none;
 }
 
 #bottom-menu {

@@ -13,25 +13,26 @@ body {
     place-content: center;
     height: 100vh;
     width: 100vw;
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .flipbook {
-    width: 75%;
-    height: 41em;
-    
-
+    width: 830px;
+    height: 593px;
+    max-width: 830px; /*1240*/
+    max-height: 593px; /*1772*/
 }
+
     /*10.05 cm x 15 cm*/
 
 
-.flipbook img{
-	width: 100%;
-	object-fit: contain;
-    user-select: none;
-    pointer-events: none;
-
-}
+    .flipbook img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        user-select: none;
+        pointer-events: none;
+    }
 
 
 .flipbook .hard {
@@ -77,13 +78,10 @@ user-select: none;
 
 @media (max-width: 1200px) {
     .flipbook {
-        width: 90% ;
-        height: 2.7% ;
-    }
-
-    .flipbook img{
-        display: block;
-        margin: 0 -20px  0 0;
+        width: 510px;
+        height: 421px;
+        max-width: 310px; /*1240*/
+        max-height: 221px; /*1772*/
     }
    
   }

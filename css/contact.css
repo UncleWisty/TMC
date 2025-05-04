@@ -1,3 +1,113 @@
-body{
+
+
+body {
     background-image: url("../images/background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS";
+    text-align: center;
 }
+
+
+.main{
+   
+    width: 80%;
+    height: 40em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.half{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2em;
+    align-items: center;
+}
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.bottom img{
+    width: 50px;
+}
+
+
+#bottom-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: center;
+
+}
+#bottom-menu img{
+    
+    width: 3em;
+    height: 3em;
+}
+
+#cat {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 350px;
+    object-fit: contain; 
+}
+
+.names{
+    width: 400px;
+    margin-top: -60px;
+    margin-bottom: -90px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("../images/background-mobile.png");
+        background-size: 100vb 100vb;
+    
+    }
+
+    
+    #cat {
+        position: static;
+        width: 150px;
+        margin-bottom: -100px;
+        margin-right: 20px;
+    }
+
+    h2{
+        font-size: large;
+    }
+    .main{
+   
+        
+        margin-bottom: 0;
+        
+    }
+  }

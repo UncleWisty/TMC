@@ -9,7 +9,7 @@ body {
 	justify-content: center;
 	align-items: center;
   }
-  /* Contenedor con los 6 paquetes */
+  /* Contenedor con los 6 packs */
   .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -18,7 +18,7 @@ body {
 	gap: 5%;
 	transition: opacity 0.5s;
   }
-  /* Cada paquete (deck) */
+  /* Cada pack */
   .deck {
 	margin-top: 5%;
 	width: 150px;
@@ -26,21 +26,19 @@ body {
 	position: relative;
 	cursor: pointer;
   }
-  /* Contenedor interno que simula la pila de cartas */
+  
   .inner-cards {
 	position: relative;
 	width: 100%;
 	height: 100%;
   }
-  /* Cada carta interna de la pila para lograr el efecto abanico */
+  
   .inner-card {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	/* QUITAR AL PONER LAS IMÁGENES */
-	background-color: #fff;
+	height: 100%;	
 	border-radius: 10px;
 	transition: transform 0.3s ease;
   }
@@ -49,11 +47,12 @@ body {
 	height: 100%;
 	border-radius: 10px;
   }
+
   /* Orden de la pila */
   .inner-card.card1 { z-index: 3; }
   .inner-card.card2 { z-index: 2; }
   .inner-card.card3 { z-index: 1; }
-  /* Efecto abanico al hacer hover sobre el paquete */
+  /* Efectos */
   .deck:hover .inner-card.card1 {
 	transform: translate(-10px, -10px) rotate(-10deg);
   }
@@ -63,7 +62,7 @@ body {
   .deck:hover .inner-card.card3 {
 	transform: translate(10px, -10px) rotate(10deg);
   }
-  /* Título sobre la pila */
+  /* Título */
   .deck-title {
 	position: absolute;
 	text-align: center;
@@ -101,7 +100,7 @@ body {
 	border: solid black 5px;
 	
   }
-  /* Contenedor para las cartas en la vista expandida en fila (row) */
+  /* Contenedor para las cartas en la vista expandida */
   #cardsContainer {
 	width: 100%;
 	padding-top: 10%;
@@ -145,7 +144,7 @@ body {
 	height: auto;
 	display: block;
   }
-  /* Oculta el contenedor de los paquetes al abrir alguno */
+  
   .hidden {
 	display: none !important;
   }
@@ -166,7 +165,7 @@ body {
 	width: 20px;
 	height: 20px;
   }
-  /* Estilos para el modal de la carta ampliada */
+  
   #cardModal {
     display: none;
     align-items: center;
